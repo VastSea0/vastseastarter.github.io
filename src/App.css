@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+body {
+  background: url('https://v1.pinimg.com/videos/mc/720p/e9/df/f6/e9dff6b912e2e992fd4727b27de8d81c.mp4') no-repeat center center/cover;
+  background-attachment: fixed; /* Arkaplanın sabit kalmasını sağlar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh; /* Sayfanın tamamını kaplaması için */
+  margin: 0; /* Sayfanın kenar boşluklarını kaldırır */
+  overflow: hidden; /* Fazla içerik varsa kaydırma çubuğunu gizler */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50vw; /* Sağ tarafta kaplayacağı genişlik */
+  background: rgba(255, 255, 255, 0.9); /* Yarı şeffaf beyaz arka plan */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 0 10px 10px 0; /* Yarı yuvarlatılmış kenarlar (isteğe bağlı) */
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-rounded {
+  border-radius: 50px;
+  width: 150px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centered-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.mt-5 {
+  color: black;
+}
+.Content {
+  background-color: rgba(255, 255, 255, 0.7); /* Yarı şeffaf beyaz arka plan */
+  padding: 20px;
+  border-radius: 10px; /* İsteğe bağlı: Kenarları yuvarlatmak için */
+}
+/* ...diğer stiller... */
+
+.powered {
   color: white;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.powered:hover {
+  transform: translateX(-50%) scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
