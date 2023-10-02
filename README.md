@@ -23,3 +23,4 @@ Projeyi yerel makinanıza klonlayın:
 
 ```sh
 git clone https://github.com/KULLANICI_ADI/PROJE_ADI.git
+# vastseastarter.github.io
